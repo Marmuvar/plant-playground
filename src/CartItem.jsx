@@ -25,7 +25,7 @@ const Cart = () => {
 
   const handleContinueShopping = (e) => {
     e.preventDefault();
-    setShowCart = false;
+    setShowCart(false);
 
   };
 

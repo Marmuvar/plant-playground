@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import {useDispatch, useSelector } from 'react-redux';
 import {addItem} from './CreatSlice'
-//import {CartItem} from './CartItem'
+import Cart from './CartItem'
 
 import './ProductList.css'
 function ProductList() {
@@ -249,7 +249,7 @@ function ProductList() {
 
     const handleCartClick = (e) => {
         e.preventDefault();
-        setShowCart = true;
+        setShowCart(true);
 
     }
 
