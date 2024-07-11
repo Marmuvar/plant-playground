@@ -243,13 +243,19 @@ function ProductList() {
         dispatch(addItem(product));
         setAddedToCart((prevState) => ({
         ...prevState,
-        [product.name]: true, // Set the product name as key and value as true to indicate it's added to cart
+        [product.name]: true, 
         }));
     };
 
     const handleCartClick = (e) => {
         e.preventDefault();
         setShowCart(true);
+
+    }
+
+    const handleContinueShopping = (e) => {
+        e.preventDefault();
+        setShowCart(false)
 
     }
 
@@ -295,7 +301,7 @@ function ProductList() {
                 </div>
 
             ) : (
-            <Cart />
+            <Cart onContinueShopping={handleContinueShopping} />
             )}
         </div>
     );

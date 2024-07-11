@@ -19,16 +19,13 @@ const Cart = ({ onContinueShopping }) => {
     return totalAmount;
   };
 
+ const handleContinueShopping = (e) => {
+    onContinueShopping(e);
+ }
+
   const handleCheckoutShopping = (e) => {
     alert('Functionality to be added for future reference');
   };
-
-  const handleContinueShopping = (e) => {
-    e.preventDefault();
-    setShowCart(false);
-
-  };
-
 
   const handleIncrement = (item) => {
     dispatch(updateQuantity({quantity: item.quantity+1}));
@@ -52,7 +49,6 @@ const Cart = ({ onContinueShopping }) => {
   const calculateTotalCost = (item) => {
     let totalCost = item.quantity * parseFloat(item.cost.substring(1));
     return totalCost;
-
   };
 
   return (
