@@ -12,22 +12,28 @@ function App() {
     setShowProductList(true);
   };
 
+  const handleAboutUs = (e) => {
+    e.preventDefault();
+    setShowProductList(false);
+
+}
+
   return (
     <div className="app-container">
       <div className={`landing-page ${showProductList ? 'fade-out' : ''}`}>
         <div className="background-image"></div>
         <div className="content">
          <div className="landing_content">
-         <h1>Welcome To Paradise Nursery</h1>
+         <h1>Welcome To Plant Playground</h1>
           <div className="divider"></div>
-          <p>Where Green Meets Serenity</p>
+          <p>Make New Green Friends</p>
          
           <button className="get-started-button" onClick={handleGetStartedClick}>
             Get Started
           </button>
          </div>
           <div className="aboutus_container">
-          <AboutUs/>
+          <AboutUs onAboutUs={handleAboutUs}/>
           </div>
           </div>
 
