@@ -247,6 +247,7 @@ function ProductList() {
         }));
     };
 
+
     const handleCartClick = (e) => {
         e.preventDefault();
         setShowCart(true);
