@@ -12,11 +12,6 @@ function App() {
     setShowProductList(true);
   };
 
-  const handleAboutUs = (e) => {
-    e.preventDefault();
-    setShowProductList(false);
-
-}
 
   return (
     <div className="app-container">
@@ -33,7 +28,7 @@ function App() {
           </button>
          </div>
           <div className="aboutus_container">
-          <AboutUs onAboutUs={handleAboutUs}/>
+            <AboutUs />
           </div>
           </div>
 

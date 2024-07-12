@@ -4,7 +4,7 @@ import {addItem} from './CreatSlice'
 import Cart from './CartItem'
 
 import './ProductList.css'
-function ProductList({onAboutUs}) {
+function ProductList() {
 
     const plantsArray = [
         {
@@ -273,11 +273,6 @@ function ProductList({onAboutUs}) {
 
     }
 
-    const handleAboutUs = (e) => {
-        onAboutUs(e);
-    }
-
-
 
     return (
         <div>
@@ -285,7 +280,7 @@ function ProductList({onAboutUs}) {
                 <div className="tag">
                     <div className="luxury">
                         <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
-                        <a href="/" onClick={(e) => handleAboutUs(e)} style={{textDecoration:'none'}}>
+                        <a href="/plant-playground/" style={{textDecoration:'none'}}>
                             <div>
                                 <h3 style={{color:'white'}}>Plant Playground</h3>
                                 <i style={{color:'white'}}>Make New Green Friends</i>
